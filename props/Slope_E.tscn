@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/testing/Isometric/slope_E.png" type="Texture" id=1]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+scale = Vector2( 0.989306, 1.00568 )
+
+[node name="SlopeE" type="Sprite" parent="."]
+position = Vector2( 0, -190.916 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -129.384, -1.9887, 0, 64.6329, 128.373, 1.9887, 0, -65.6272 )

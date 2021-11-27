@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/testing/FloorMap.tres" type="TileSet" id=2]
+[ext_resource path="res://assets/testing/props/Block_N.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/testing/props/CrateN.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/testing/props/Pole.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/testing/props/Window_N.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/testing/props/Slope_E.tscn" type="PackedScene" id=7]
+
+[node name="Main Scene" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 128, 64 )
+format = 1
+tile_data = PoolIntArray( -196600, 4, 0, -131071, 8, 0, -131069, 8, 0, -131067, 8, 0, -131065, 9, 0, -131063, 9, 0, -65527, 9, 0, 1, 8, 0, 3, 8, 0, 5, 8, 0, 6, 3, 0, 7, 3, 0, 65543, 4, 0, 65544, 9, 0, 65545, 9, 0, 131073, 8, 0, 131075, 8, 0, 131077, 8, 0, 131079, 9, 0, 131080, 9, 0, 131081, 9, 0, 196610, 9, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 9, 0, 262147, 9, 0, 262148, 4, 0, 262149, 9, 0 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Pole_N" parent="YSort" instance=ExtResource( 5 )]
+position = Vector2( 382, 541 )
+
+[node name="Block_N2" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -126, 485 )
+
+[node name="CrateN" parent="YSort" instance=ExtResource( 4 )]
+position = Vector2( 447, 671 )
+
+[node name="player" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 385, 542 )
+
+[node name="Block_N3" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 122, 357 )
+
+[node name="Block_N" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( -4, 419 )
+
+[node name="Block_N4" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 249, 294 )
+
+[node name="Block_N5" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 382, 357 )
+
+[node name="Window_N" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 128, 609 )
+
+[node name="Block_N6" parent="YSort" instance=ExtResource( 3 )]
+position = Vector2( 0, 547 )
+
+[node name="Slope_E" parent="YSort" instance=ExtResource( 7 )]
+position = Vector2( 508, 420 )
